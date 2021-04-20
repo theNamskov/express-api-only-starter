@@ -28,21 +28,26 @@ var expect = _chai["default"].expect; // const expect = require('chai').expect
 _chai["default"].use(_chaiHttp["default"]);
 
 describe("Notes API", function () {
-  // const stubValue = {
-  //     title: faker.lorem.word(),
-  //     description: faker.sentence()
-  //   };
-  // This variable will be used to hold the notes from the Find All Call
+  /**
+   * This variable will be used to hold the notes from the Find All Call
+   */
   var notes; // This function will run before every test
   // beforeEach((done) => {
   //
   // });
+
+  /**
+   * This function will once before all the test
+   */
   // before(async () => {
-  //    const db = await database()
+  // COnnect to the DB
   //  });
+
+  /**
+   * This function will run after all the test is completed
+   */
   //  after(async () => {
-  //     await db.dropDatabase();
-  //     await db.close();
+  // Drop the DB
   //  });
 
   /**
@@ -79,7 +84,7 @@ describe("Notes API", function () {
    */
 
   /**
-   * Testing a service
+   * Testing a Note Services
    */
 
   describe("View Notes Services", function () {
@@ -96,24 +101,23 @@ describe("Notes API", function () {
 
             case 3:
               _notes = _context.sent;
-              console.log(_notes);
               expect(_notes.docs).to.be.an('array');
               expect(_notes).to.have.property('docs');
-              _context.next = 12;
+              _context.next = 11;
               break;
 
-            case 9:
-              _context.prev = 9;
+            case 8:
+              _context.prev = 8;
               _context.t0 = _context["catch"](0);
               // Expect the errors here
               console.log(_context.t0);
 
-            case 12:
+            case 11:
             case "end":
               return _context.stop();
           }
         }
-      }, _callee, null, [[0, 9]]);
+      }, _callee, null, [[0, 8]]);
     })));
   });
 });

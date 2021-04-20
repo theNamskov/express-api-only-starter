@@ -6,14 +6,13 @@ var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"))
 
 var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 
+require("dotenv/config");
+
 var _database = require("./config/database");
 
 var _server = require("./server");
 
 var _keys = require("./config/keys");
-
-require('dotenv').config(); // import configFile from './config/configFile'
-
 
 if (process.env.NODE_ENV === 'production') {
   var _port = _keys.keys.PORT_PRODUCTION || 8080;
